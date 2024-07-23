@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Videojuegos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        body {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">CRUD de Videojuegos</h1>
+        <div class="text-right mb-3">
+            <a href="../index.html" class="btn btn-secondary">Volver a la Compra</a>
+        </div>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="number" id="id" class="form-control">
+        </div>
+
+        <!-- <div>
+            <label for="clienteSelect">Seleccionar Cliente:</label>
+           
+            <select class="form-control" id="clienteSelect">
+                <option selected disabled>Seleccione un cliente</option>
+            </select>
+        </div> -->
+
+
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="descripcion">Descripción</label>
+            <input type="text" id="descripcion" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="precio">Precio</label>
+            <input type="number"  onkeydown="return event.key !== 'e' && event.key !== 'E';" id="precio" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="categoria">Categoría</label>
+            <select class="form-control" id="categoria">
+                <option selected disabled>Seleccione categoria</option>
+                <option value="accion">Acción</option>
+                <option value="aventura">Aventura</option>
+                <option value="estrategia">Estrategia</option>
+            </select>
+        </div>
+        <button class="btn btn-primary" onclick="crearVideojuego()">Agregar Videojuego</button>
+        <button class="btn btn-success" onclick="actualizarVideojuego()" id="updateBtn" style="display:none;">Actualizar Videojuego</button>
+        <h2 class="mt-4">Lista de Videojuegos</h2>
+        <ul id="listaVideojuegos" class="list-group">
+        </ul>
+    </div>
+    <script src="../assets/crud.js"></script>
+</body>
+</html>

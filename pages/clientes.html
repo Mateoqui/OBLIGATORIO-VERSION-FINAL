@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Clientes CRUD</h1>
+        <div class="text-right mb-3">
+            <a href="../index.html" class="btn btn-secondary">Volver a la Compra</a>
+        </div>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="number" id="id" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="descripcion">Apellido</label>
+            <input type="text" id="apellido" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="cedula">Cedula</label>
+            <input type="number"  onkeydown="return event.key !== 'e' && event.key !== 'E';" id="cedula" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="precio">Telefono</label>
+            <input type="number"  onkeydown="return event.key !== 'e' && event.key !== 'E';" id="telefono" class="form-control">
+        </div>
+
+
+        <button class="btn btn-primary" onclick="crearCliente()">Agregar Cliente</button>
+        <button class="btn btn-success" onclick="actualizarCliente()" id="updateBtn" style="display:none;">Actualizar Cliente</button>
+        <h2 class="mt-4">Lista de Clientes</h2>
+        <ul id="listaClientes" class="list-group">
+        </ul>
+    </div>
+    <script src="../assets/clientes.js"></script>
+</body>
+</html>
